@@ -1,0 +1,65 @@
+Script started on Thu 13 Apr 2017 11:36:01 PM PDT
+javier.rodriguez3@syccuxas01:~/cs162/project1> vim project1.cpp
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;51r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[51;1H"project1.cpp" 88L, 1938C[>c[1;1H[34m// Project 1: Dice Game
+// Javier Rodriguez
+// 09 April 2017
+// Sources: None[m
+
+[35m#include [m[31m<iostream>[m
+[35m#include [m[31m<string>[m
+[35m#include [m[31m<cstdlib>[m
+[35m#include [m[31m<ctime>[m
+[35m#include [m[31m<unistd.h>[m
+
+[33musing[m [32mnamespace[m std;
+
+[32mint[m main()
+{[16;9H[32mchar[m response = [31m'y'[m;[17;9Hstring name;[18;9H[32mint[m die1;[15C[34m//value of first die[m[19;9H[32mint[m die2;[15C[34m//value of second die[m[20;9H[32mint[m sum = [31m0[m;[12C[34m//sum of die1 and die2[m[21;9H[32mint[m score = [31m0[m;[10C[34m//total score of player[m[22;9H[32mint[m rolls = [31m0[m;[10C[34m//number of rolls since last game begun[m[24;9Hcout << [31m"[m[35m\n\n[m[31m&&&&& SIMPLE DICE GAME &&&&&"[m << endl;[26;9H[34m//Prompts user for name[m[27;9Hcout << [31m"What is your name? "[m;[28;9Hcin >> name;[29;9Hcout << [31m"[m[35m\n[m[31m"[m;[31;9Hsrand(([32munsigned[m) time([31m0[m)); [34m// Seeding the Library[m[33;9H[33mwhile[m (response == [31m'y'[m || response == [31m'Y'[m)[34;9H{[35;17H[33mwhile[m [46m([mrolls < [31m5[m[46m)[m[36;17H{[37;25Hcout << [31m"Rolling dice..."[m << endl;[38;25Hsleep([31m1[m);[7C[34m//this will pause for 1 second[m[39;25Hdie1 = (rand() % [31m6[m) + [31m1[m;[40;25Hdie2 = (rand() % [31m6[m) + [31m1[m;[41;25Hsum = die1 + die2;[43;25Hcout << name << [31m", you rolled a "[m << die1 << [31m" and a "[m << die2 << endl;[44;25Hcout << [31m"For a total of [m[35m\n[m[31m"[m << sum << endl;[46;25H[34m//user wins game[m[47;25H[33mif[m (sum == [31m7[m || sum == [31m11[m)[48;25H{[49;33Hscore += [31m3[m;[50;33Hcout << name << [31m" WINS! three points earned[m[35m\n[m[31m"[m << endl;[51;78H35,19-33      Top[35;33H[?12l[?25h[?25l[51;1H[K[51;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[51;1H[K[51;1H[?1l>[?12l[?25h[?1049ljavier.rodriguez3@syccuxas01:~/cs162/project1> g++ -o proj1 project1.cpp
+javier.rodriguez3@syccuxas01:~/cs162/project1> ./proj1
+
+
+&&&&& SIMPLE DICE GAME &&&&&
+What is your name? Javier
+
+Rolling dice...
+Javier, you rolled a 3 and a 5
+For a total of 
+8
+re-roll dice.
+
+Rolling dice...
+Javier, you rolled a 3 and a 2
+For a total of 
+5
+re-roll dice.
+
+Rolling dice...
+Javier, you rolled a 3 and a 3
+For a total of 
+6
+re-roll dice.
+
+Rolling dice...
+Javier, you rolled a 4 and a 5
+For a total of 
+9
+re-roll dice.
+
+Rolling dice...
+Javier, you rolled a 6 and a 1
+For a total of 
+7
+Javier WINS! three points earned
+
+
++++ END GAME +++
+Javier do you want to play again? (y or n)
+n
+
+Javier's total score is: 3
+GOODBYE!
+
+javier.rodriguez3@syccuxas01:~/cs162/project1> exit
+exit
+
+Script done on Thu 13 Apr 2017 11:36:58 PM PDT

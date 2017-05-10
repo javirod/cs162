@@ -1,0 +1,47 @@
+Script started on Sat 22 Apr 2017 12:36:16 AM PDT
+javier.rodriguez3@syccuxas01:~/cs162/lab2> vim lab2.cppc[C[C[C[C[C[C[C[C[C[C[Cls[Kcim lab2.cppv[C[C[C[C[C[C[C[C[C[C[C[Kvim lab2.cppc[C[C[C[C[C[C[C[C[C[C[Cls[Kcd lab2cs162ls[Kvim lab2.cpp[6P./lab2g++ -o lab2 lab2.cpp[8Pvim[C[C[C[C[C[C[C[C[C[8@g++ -o lab2[C[C[C[C[C[C[C[C[C
+javier.rodriguez3@syccuxas01:~/cs162/lab2> g++ -o lab2 lab2.cpp[8Pvim[C[C[C[C[C[C[C[C[Cc[C[C[C[C[C[C[C[C[C[C[Cls[Kcd lab2cs162ls[Kvim lab2.cpp[6P./lab2g++ -o lab2 lab2.cpp./lab2[K
+Enter the first word:
+jump
+
+Enter the second word:
+pump
+The words are NOT anagrams of eachother.
+Do you want to continue? (y or n)
+y
+Enter the first word:
+tip
+
+Enter the second word:
+pit
+The words are anagrams of eachother.
+Do you want to continue? (y or n)
+y
+Enter the first word:
+hated
+
+Enter the second word:
+death
+The words are anagrams of eachother.
+Do you want to continue? (y or n)
+y
+Enter the first word:
+hotter
+
+Enter the second word:
+tinker
+The words are NOT anagrams of eachother.
+Do you want to continue? (y or n)
+y
+Enter the first word:
+alloy
+
+Enter the second word:
+loyal
+The words are anagrams of eachother.
+Do you want to continue? (y or n)
+n
+javier.rodriguez3@syccuxas01:~/cs162/lab2> [Kjavier.rodriguez3@syccuxas01:~/cs162/lab2> [Kjavier.rodriguez3@syccuxas01:~/cs162/lab2> [Kjavier.rodriguez3@syccuxas01:~/cs162/lab2> [Kjavier.rodriguez3@syccuxas01:~/cs162/lab2> exit
+exit
+
+Script done on Sat 22 Apr 2017 12:37:51 AM PDT

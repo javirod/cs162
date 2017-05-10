@@ -1,0 +1,37 @@
+Script started on Thu 13 Apr 2017 07:56:35 PM PDT
+javier.rodriguez3@syccuxas01:~/cs162/lab1> vim lab1.cpp
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;60r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[60;1H"lab1.cpp" 80L, 1431C[>c[1;1H[34m// Lab 1: Your Weight on Another Planet
+// Javier Rodriguez
+// 13 April 17[m
+
+[35m#include [m[31m<iostream>[m
+[35m#include [m[31m<iomanip>[m
+
+[38;5;130musing[m [32mnamespace[m std;
+
+[32mint[m main()
+{[12;9H[32mdouble[m wtPlanet;[13;9H[32mdouble[m wtEarth;[14;9H[32mdouble[m gPlanet;[15;9H[32mdouble[m gEarth = [31m9.81[m;[16;9H[32mdouble[m gMoon = [31m1.622[m;[17;9H[32mdouble[m gMars = [31m3.71[m;[18;9H[32mdouble[m gNeptune = [31m11.15[m;[19;9H[32mdouble[m gJupiter = [31m24.79[m;[20;9H[32mchar[m response = [31m'y'[m;[21;9H[32mint[m planSelect;[23;9Hcout << [31m"[m[35m\n\n[m[31m====================[m[35m\n[m[31m"[m;[24;9Hcout << fixed << showpoint;[25;9Hcout << setprecision([31m2[m);[27;9H[38;5;130mwhile[m (response == [31m'y'[m || response == [31m'Y'[m)[28;9H{[29;17Hcout << [31m"Please enter your weight on Earth: "[m << endl;[30;17Hcin >> wtEarth;[31;17Hcout << [31m"[m[35m\n[m[31m"[m;[33;17H[38;5;130mwhile[m (wtEarth <= [31m0[m)[34;17H{[35;25Hcout << [31m"Invalid weight. Please re-enter."[m << endl;[36;25Hcin >> wtEarth;[37;25Hcout << [31m"[m[35m\n[m[31m"[m;[38;17H}[40;17Hcout << [31m"Choose a Planet:[m[35m\n[m[31m"[m << [31m"1 - Moon[m[35m\n[m[31m2 - Mars[m[35m\n[m[31m3 - Neptune[m[35m\n[m[31m4 - Jupiter[m[35m\n[m[31m"[m;[41;17Hcin >> planSelect;[42;17Hcout << [31m"[m[35m\n[m[31m"[m;[44;17H[38;5;130mwhile[m (planSelect < [31m1[m || planSelect > [31m4[m)[45;17H{[46;25Hcout << [31m"Invalid Selection. Please re-enter."[m << endl;[47;25Hcin >> planSelect;[48;25Hcout << [31m"[m[35m\n[m[31m"[m;[49;17H}[51;17H[38;5;130mif[m (planSelect == [31m1[m)[52;17H{[53;25HgPlanet = gMoon;[54;17H}[56;17H[38;5;130melse[m [38;5;130mif[m (planSelect ==[31m2[m)[57;17H{[58;25HgPlanet = gMars;[59;17H}[60;84H27,42-49      Top[27;49H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[60;1H[K[60;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[60;1H[K[60;1H[?1l>[?12l[?25h[?1049ljavier.rodriguez3@syccuxas01:~/cs162/lab1> g++ -0[Ko lab1 lab1.cpp
+javier.rodriguez3@syccuxas01:~/cs162/lab1> ./lab1
+
+
+====================
+Please enter your weight on Earth: 
+165
+
+Choose a Planet:
+1 - Moon
+2 - Mars
+3 - Neptune
+4 - Jupiter
+1
+
+Your weight will be: 27.28
+
+Would you like to continue (y or n)
+n
+
+
+javier.rodriguez3@syccuxas01:~/cs162/lab1> exit
+exit
+
+Sdding cript done on Thu 13 Apr 2017 07:57:21 PM PDT

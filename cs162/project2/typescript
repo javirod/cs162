@@ -1,0 +1,155 @@
+Script started on Fri 28 Apr 2017 12:12:55 AM PDT
+javier.rodriguez3@syccuxas01:~/cs162/project2> vim project2.cpp
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;46r[?12;25h[?12l[?25h[27m[m[38;5;252m[48;5;235m[H[2J[?25l[46;1H"project2.cpp" 317L, 6653C[>c[1;1H[38;5;244m[48;5;236m 58 [m[38;5;252m[48;5;235m[16Cinfile.ignore(MAX_STR, [38;5;114m'\n'[m[38;5;252m[48;5;235m);
+[38;5;244m[48;5;236m 59 [m[38;5;252m[48;5;235m[16C[38;5;244m//get next field, #holds[m[38;5;252m[48;5;235m
+[38;5;244m[48;5;236m 60 [m[38;5;252m[48;5;235m[16Cinfile >> CatalogStruct[count].numHolds;
+[38;5;244m[48;5;236m 61 [m[38;5;252m[48;5;235m[16Cinfile.ignore(MAX_STR, [38;5;114m'\n'[m[38;5;252m[48;5;235m);
+[38;5;244m[48;5;236m 62 [m[38;5;252m[48;5;235m[16C[38;5;244m//start next record[m[38;5;252m[48;5;235m
+[38;5;244m[48;5;236m 63 [m[38;5;252m[48;5;235m[16Ccount++;
+[38;5;244m[48;5;236m 64 
+ 65 [m[38;5;252m[48;5;235m[16Cc = infile.peek();
+[38;5;244m[48;5;236m 66 [m[38;5;252m[48;5;235m[8C}
+[38;5;244m[48;5;236m 67 
+ 68 [m[38;5;252m[48;5;235m[8C[38;5;244m//need to close the file so that it can be re-opened again[m[38;5;252m[48;5;235m
+[38;5;244m[48;5;236m 69 [m[38;5;252m[48;5;235m[8Cinfile.close();
+[38;5;244m[48;5;236m 70 [m[38;5;252m[48;5;235m}
+[38;5;244m[48;5;236m 71 
+ 72 [m[38;5;252m[48;5;235m[38;5;176mvoid[m[38;5;252m[48;5;235m writeToFile([38;5;176mint[m[38;5;252m[48;5;235m& count, [38;5;176mstruct[m[38;5;252m[48;5;235m Books CatalogStruct[])
+[38;5;244m[48;5;236m 73 [m[38;5;252m[48;5;235m{
+[38;5;244m[48;5;236m 74 [m[38;5;252m[48;5;235m[8Cofstream outfile;
+[38;5;244m[48;5;236m 75 
+ 76 [m[38;5;252m[48;5;235m[8Coutfile.open([38;5;211m"library.txt"[m[38;5;252m[48;5;235m);
+[38;5;244m[48;5;236m 77 
+ 78 [m[38;5;252m[48;5;235m[8C[38;5;180mif[m[38;5;252m[48;5;235m(!outfile)
+[38;5;244m[48;5;236m 79 [m[38;5;252m[48;5;235m[8C{
+[38;5;244m[48;5;236m 80 [m[38;5;252m[48;5;235m[16Ccout << [38;5;211m"Couldn't open library.txt for writing"[m[38;5;252m[48;5;235m << endl;
+[38;5;244m[48;5;236m 81 [m[38;5;252m[48;5;235m[16Cexit(-[38;5;211m1[m[38;5;252m[48;5;235m);
+[38;5;244m[48;5;236m 82 [m[38;5;252m[48;5;235m[8C}
+[38;5;244m[48;5;236m 83 
+ 84 [m[38;5;252m[48;5;235m[8C[38;5;244m//writes # of books in file[m[38;5;252m[48;5;235m
+[38;5;244m[48;5;236m 85 [m[38;5;252m[48;5;235m[8Coutfile << count << endl;
+[38;5;244m[48;5;236m 86 
+ 87 [m[38;5;252m[48;5;235m[8C[38;5;180mfor[m[38;5;252m[48;5;235m([38;5;176mint[m[38;5;252m[48;5;235m i = [38;5;211m0[m[38;5;252m[48;5;235m; i < count; i++)
+[38;5;244m[48;5;236m 88 [m[38;5;252m[48;5;235m[8C{
+[38;5;244m[48;5;236m 89 [m[38;5;252m[48;5;235m[16Coutfile << CatalogStruct[i].id << endl;
+[38;5;244m[48;5;236m 90 [m[38;5;252m[48;5;235m[16Coutfile << CatalogStruct[i].title << endl;
+[38;5;244m[48;5;236m 91 [m[38;5;252m[48;5;235m[16Coutfile << CatalogStruct[i].author << endl;
+[38;5;244m[48;5;236m 92 [m[38;5;252m[48;5;235m[16Coutfile << CatalogStruct[i].numCopies << endl;
+[38;5;244m[48;5;236m 93 [m[38;5;252m[48;5;235m[16Coutfile << CatalogStruct[i].numCheckedOut << endl;
+[38;5;244m[48;5;236m 94 [m[38;5;252m[48;5;235m[16Coutfile << CatalogStruct[i].numHolds << endl;
+[38;5;244m[48;5;236m 95 [m[38;5;252m[48;5;235m[8C}
+[38;5;244m[48;5;236m 96 
+ 97 [m[38;5;252m[48;5;235m[8Coutfile.close();
+[38;5;244m[48;5;236m 98 [m[38;5;252m[48;5;235m}
+[38;5;244m[48;5;236m 99 
+100 [m[38;5;252m[48;5;235m[38;5;176mvoid[m[38;5;252m[48;5;235m printBook([38;5;176mint[m[38;5;252m[48;5;235m index, [38;5;176mstruct[m[38;5;252m[48;5;235m Books CatalogStruct[])
+[38;5;244m[48;5;236m101 [m[38;5;252m[48;5;235m{
+[38;5;244m[48;5;236m102 [m[38;5;252m[48;5;235m[8C[38;5;176mint[m[38;5;252m[48;5;235m i = index;[46;75H80,3-17[7C20%[23;21H[?12l[?25h[?25l[46;1H[K[46;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[46;1H[K[46;1H[?1l>[?12l[?25h[?1049ljavier.rodriguez3@syccuxas01:~/cs162/project2> g++ -o proj2 project2.cpp
+javier.rodriguez3@syccuxas01:~/cs162/project2> ./proj2
+********** MAIN MENU**********
+1 - Print Catalog
+2 - Search by Title
+3 - Search by Author
+4 - Do Action
+5 - QUIT
+Enter choice:
+1
+%%%%%%%%%% Book Catalog %%%%%%%%%%
+
+-----  ID: 10 -----
+Title: Great Expectations
+Author: Charles Dickens
+Number of Copies: 2
+Number Checked Out: 0
+Number of Holds: 0
+------------------------------
+-----  ID: 20 -----
+Title: Huckleberry Finn
+Author: Mark Twain
+Number of Copies: 1
+Number Checked Out: 1
+Number of Holds: 5
+------------------------------
+-----  ID: 30 -----
+Title: A Tale of Two Cities
+Author: Charles Dickens
+Number of Copies: 3
+Number Checked Out: 2
+Number of Holds: 0
+------------------------------
+********** MAIN MENU**********
+1 - Print Catalog
+2 - Search by Title
+3 - Search by Author
+4 - Do Action
+5 - QUIT
+Enter choice:
+2
+Please enter title of book: 
+asdf
+No books in the Catalog with that title.
+********** MAIN MENU**********
+1 - Print Catalog
+2 - Search by Title
+3 - Search by Author
+4 - Do Action
+5 - QUIT
+Enter choice:
+3
+Please enter author of book: 
+Charles Dickens
+-----  ID: 10 -----
+Title: Great Expectations
+Author: Charles Dickens
+Number of Copies: 2
+Number Checked Out: 0
+Number of Holds: 0
+------------------------------
+-----  ID: 30 -----
+Title: A Tale of Two Cities
+Author: Charles Dickens
+Number of Copies: 3
+Number Checked Out: 2
+Number of Holds: 0
+------------------------------
+********** MAIN MENU**********
+1 - Print Catalog
+2 - Search by Title
+3 - Search by Author
+4 - Do Action
+5 - QUIT
+Enter choice:
+4
+Enter ID of book: (or enter -1 to see a list of books): 
+30
+What would you like to do?
+1 - checkout book
+2 - return book
+3 - hold book
+4 - remove hold
+Enter choice:
+1
+Check out successful.
+-----  ID: 30 -----
+Title: A Tale of Two Cities
+Author: Charles Dickens
+Number of Copies: 3
+Number Checked Out: 3
+Number of Holds: 0
+------------------------------
+********** MAIN MENU**********
+1 - Print Catalog
+2 - Search by Title
+3 - Search by Author
+4 - Do Action
+5 - QUIT
+Enter choice:
+5
+*** 
+
+THANK YOU FOR USING OUR LIBRARY ***
+
+javier.rodriguez3@syccuxas01:~/cs162/project2> exit
+exit
+
+Script done on Fri 28 Apr 2017 12:15:00 AM PDT
